@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>view product</title>
+</head>
+<body>
+<h2>View product</h2>
+<br>
+<div>
+    <form th:action="@{/cart/odernow/__${product.id}__}" method="get">
+        <img width="200px" height="200px" th:src="@{'/image/' + ${product.image}}">
+        <p>Ten san pham: <b th:text="${product.name}"></b></p>
+        <p>Gia ban: <b th:text="${product.price}"></b></p>
+        <button type="submit"><span>Them vao gio hang</span></button>
+    </form>
+</div>
+</body>
+</html>
